@@ -1,0 +1,1 @@
+# AkiRAR-Activator
