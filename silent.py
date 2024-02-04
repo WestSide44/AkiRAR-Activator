@@ -2,6 +2,7 @@ import os
 import requests
 import shutil
 import time
+import key 
 
 
 key = 'https://raw.githubusercontent.com/ilyhalight/AkiRAR-Activator/master/rarreg.key'
@@ -18,38 +19,38 @@ def activate(dir):
         try:
             os.remove(file_path)
         except PermissionError:
-            print('Перезапустите программу с правами администратора')
+            print('ГЏГҐГ°ГҐГ§Г ГЇГіГ±ГІГЁГІГҐ ГЇГ°Г®ГЈГ°Г Г¬Г¬Гі Г± ГЇГ°Г ГўГ Г¬ГЁ Г Г¤Г¬ГЁГ­ГЁГ±ГІГ°Г ГІГ®Г°Г ')
     else:
         pass
 
     try:
         download(key)
     except:
-        print('Проверьте соединение с интернетом')
+        print('ГЏГ°Г®ГўГҐГ°ГјГІГҐ Г±Г®ГҐГ¤ГЁГ­ГҐГ­ГЁГҐ Г± ГЁГ­ГІГҐГ°Г­ГҐГІГ®Г¬')
     try:
         shutil.copy2('rarreg.key', dir)
     except PermissionError:
-        print('Перезапустите программу с правами администратора')
+        print('ГЏГҐГ°ГҐГ§Г ГЇГіГ±ГІГЁГІГҐ ГЇГ°Г®ГЈГ°Г Г¬Г¬Гі Г± ГЇГ°Г ГўГ Г¬ГЁ Г Г¤Г¬ГЁГ­ГЁГ±ГІГ°Г ГІГ®Г°Г ')
     download_file = os.path.join(os.path.abspath(os.path.dirname(__file__)), 'rarreg.key')
     try:
         os.remove(download_file)
     except:
         pass
 
-    print('WinRAR был успешно активирован')
+    print('WinRAR ГЎГ»Г« ГіГ±ГЇГҐГёГ­Г® Г ГЄГІГЁГўГЁГ°Г®ГўГ Г­')
 
 
 def check_activate():
     if os.path.isdir(default_dir):
         activate(default_dir)
     else:
-        print('Папка WinRAR находится не в стандартном месте')
+        print('ГЏГ ГЇГЄГ  WinRAR Г­Г ГµГ®Г¤ГЁГІГ±Гї Г­ГҐ Гў Г±ГІГ Г­Г¤Г Г°ГІГ­Г®Г¬ Г¬ГҐГ±ГІГҐ')
 
 if __name__ == '__main__':
     if os.name == 'nt':
         check_activate()
-        print('Выход...')
+        print('Г‚Г»ГµГ®Г¤...')
         time.sleep(3)
     else:
-        print('Данная OS не поддерживается')
+        print('Г„Г Г­Г­Г Гї OS Г­ГҐ ГЇГ®Г¤Г¤ГҐГ°Г¦ГЁГўГ ГҐГІГ±Гї')
         time.sleep(3)
